@@ -1,3 +1,4 @@
+console.log('2-hbnb.js loaded');
 $(document).ready(function() {
     const amenityDict = {};
     $('input[type=checkbox]').click(function() {
@@ -10,10 +11,11 @@ $(document).ready(function() {
     });
 });
 
-$.get('http://0.0.0.0:5001/api/v1/status/', function (data) {
+const link = "http://" + window.location.hostname;
+$.get(`${link}:5001/api/v1/status/`, function (data) {
     if (data.status === 'OK') {
-        $('#api_status').addClass('available');
+        $('DIV#api_status').addClass('available');
     } else {
-        $('#api_status').removeClass('available');
+        $('DIV#api_status').removeClass('available');
     }
 })
