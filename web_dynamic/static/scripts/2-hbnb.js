@@ -1,4 +1,3 @@
-console.log('2-hbnb.js loaded');
 $(document).ready(function() {
     const amenityDict = {};
     $('input[type=checkbox]').click(function() {
